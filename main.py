@@ -222,13 +222,13 @@ def CMSIS():
 
 
 def PlatformsAirMCU(version):
-    fileName = "AirMCU-" + version + ".zip"
-    url = "https://github.com/Air-duino/Arduino-AirMCU/releases/download/" + version + "/" + fileName
+    fileName = "CheaperArduinoBorad" + version + ".zip"
+    url = "https://github.com/Dr-chen137/CheaperArduinoBorad/releases/download/" + version + "/" + fileName
     downloadFile(url)
     data = {}
     dataCn = {}
-    data['name'] = "Air MCU"
-    data['architecture'] = "AirMCU"
+    data['name'] = "Cheaper Arduino"
+    data['architecture'] = "CheaprArduino"
     data['version'] = version
     data['category'] = "Contributed"
     data['help'] = {'online': "https://arduino.luatos.com"}
@@ -236,7 +236,7 @@ def PlatformsAirMCU(version):
     data['archiveFileName'] = fileName
     data['checksum'] = "SHA-256:" + ComputeSHA256(fileName)
     data['size'] = ComputeSize(fileName)
-    data['boards'] = [{'name': "Air001"}]
+    data['boards'] = [{'name': "ChearperArduinoBroad"}]
     data['toolsDependencies'] = [{'packager': "AirM2M", 'name': "xpack-arm-none-eabi-gcc", 'version': GCCVersion},
                                  {'packager': "AirM2M", 'name': "CMSIS", 'version': CMSISVersion},
                                  {'packager': "AirM2M", 'name': "AirISP", 'version': AirISPVersion}]
